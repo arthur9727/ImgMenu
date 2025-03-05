@@ -1,15 +1,8 @@
-// Função para obter parâmetros da URL
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
+const params = new URLSearchParams(window.location.search);
+const imageName = params.get("image");
 
-// Obtém o valor do parâmetro "image"
-const imageName = getQueryParam("image");
-
-// Define a URL da imagem com base no parâmetro
 if (imageName) {
-    document.getElementById("displayImage").src = `images/notify.PNG`;
+    document.getElementById("displayImage").src = `images/${notify}.png`; // Ajuste a extensão conforme necessário
 } else {
-    document.getElementById("displayImage").alt = "Nenhuma imagem encontrada.";
+    console.error("Nenhuma imagem especificada na URL.");
 }
