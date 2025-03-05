@@ -9,7 +9,7 @@ const imageName = getQueryParam("image");
 
 // Define a URL da imagem com base no parâmetro
 if (imageName) {
-    document.getElementById("displayImage").src = `images/${notify}.png`;
+    document.getElementById("displayImage").src = `images/notify.PNG`;
 } else {
     document.getElementById("displayImage").alt = "Nenhuma imagem encontrada.";
 }
